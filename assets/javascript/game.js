@@ -6,26 +6,31 @@ var green = Math.floor(Math.random() * 12) + 1
 function onload(){
     document.getElementById("target").innerHTML = target;
 }
-function addRed() {
-    var result = parseInt(document.getElementById("result").innerHTML) + red
-    document.getElementById("result").innerHTML = result;
-    compare(target, result)
-}
-function addBlue() {
-    var result = parseInt(document.getElementById("result").innerHTML) + blue
-    document.getElementById("result").innerHTML = result;
-    compare(target, result)
-}
-function addYellow() {
-    var result = parseInt(document.getElementById("result").innerHTML) + yellow
-    document.getElementById("result").innerHTML = result;
-    compare(target, result)
-}
-function addGreen() {
-    var result = parseInt(document.getElementById("result").innerHTML) + green
-    document.getElementById("result").innerHTML = result;
-    compare(target, result)
-}
+$(document).ready(function() {
+    $("#addRed").on("click", function() {
+        var result = parseInt(document.getElementById("result").innerHTML) + red
+        document.getElementById("result").innerHTML = result;
+        compare(target, result);
+    });
+
+    $("#addBlue").on("click", function() {
+        var result = parseInt(document.getElementById("result").innerHTML) + blue
+        document.getElementById("result").innerHTML = result;
+        compare(target, result)
+    });
+
+    $("#addYellow").on("click", function() {
+        var result = parseInt(document.getElementById("result").innerHTML) + yellow
+        document.getElementById("result").innerHTML = result;
+        compare(target, result)
+    });
+
+    $("#addGreen").on("click", function() {
+        var result = parseInt(document.getElementById("result").innerHTML) + green
+        document.getElementById("result").innerHTML = result;
+        compare(target, result)
+    });
+});
 
 function compare(target, result){
     if(parseInt(result)<parseInt(target)){

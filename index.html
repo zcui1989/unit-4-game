@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
 </head>
 <body onload="onload()">
    <div class = "hbox">
@@ -17,16 +17,16 @@
        <h2 id="target">0</h2></p>
    </div>
    <div class = "r">
-       <button type="button" onclick="addRed()"></button>
+       <button id="addRed"></button>
    </div>
    <div class = "b">
-       <button type="button" onclick="addBlue()"></button>
+       <button id="addBlue"></button>
    </div>
    <div class ="y">
-       <button type="button" onclick="addYellow()"></button>
+       <button id="addYellow"></button>
    </div>
    <div class = "g">
-       <button type="button" onclick="addGreen()"></button>
+       <button id="addGreen"></button>
    </div>
    <div class = "yourscore">
        <h3>Your total score is:</h3>
@@ -35,6 +35,7 @@
        <p><h2>score:</h2> <h2 id="result">0</h2></p>
 
    </div>
+   
    <script src="assets/javascript/game.js"></script>
    <h2>Win</h2>
    <h2 id="win">0</h2>
